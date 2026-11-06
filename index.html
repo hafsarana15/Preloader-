@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preloader</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    .preloader {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: grid;
+      place-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
+
+    img {
+      width: 300px;
+      margin: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="preloader">
+    <div class="spinner-border text-primary" role="status"></div>
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <h1>Preloader</h1>
+
+  <img
+    src="https://images.unsplash.com/photo-1792428696475-cbb1fa27645b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+    alt="Image">
+
+  <br>
+
+  <button class="btn btn-primary">Slide</button>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Voluptatum debitis voluptas delectus ut eaque recusandae
+    id maiores totam harum odit?
+  </p>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="./jquery.min.js.js"></script>
+
+  <script>
+
+    $(window).on("load", function () {
+
+      setTimeout(function () {
+        $(".preloader").slideUp();
+      }, 3000);
+
+    });
+
+    $("button").click(function () {
+
+      $("p").slideToggle();
+
+    });
+
+  </script>
+
+</body>
+
+</html>
